@@ -1,0 +1,37 @@
+{
+    "name": "ranbogmord/capistrano",
+    "authors": [
+        {
+            "name": "John Eriksson",
+            "email": "john@provideit.se"
+        }
+    ],
+    "require": {
+    	"wordpress": "3.9.2",
+    	"php": ">= 5.3.0",
+    	"composer/installers": "~1.0",
+    	"fancyguy/webroot-installer": "1.0.0"
+    },
+
+    "repositories": [
+    	{
+    		"type": "package",
+    		"package": {
+    			"name": "wordpress",
+    			"type": "webroot",
+    			"version": "3.9.2",
+    			"dist": {
+    				"type": "zip",
+    				"url": "http://sv.wordpress.org/wordpress-3.9.2-sv_SE.zip"
+    			},
+    			"require": {
+    				"fancyguy/webroot-installer": "1.0.0"
+    			}
+    		}
+    	}
+    ],
+    "extra": {
+    	"webroot-dir": "wp",
+    	"webroot-package": "wordpress"
+    }
+}
