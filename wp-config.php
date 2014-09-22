@@ -42,7 +42,7 @@ define('BB_HOST', 'http://' . $_SERVER['HTTP_HOST']);
 /* Custom WordPress URL. */
 define( 'WP_SITEURL',     BB_HOST . '/wp' );
 define( 'WP_HOME',        BB_HOST );
-define( 'WP_CONTENT_URL', BB_HOST . 'wp-content' );
+define( 'WP_CONTENT_URL', BB_HOST . '/wp-content' );
 define( 'WP_CONTENT_DIR', dirname(__FILE__) . '/wp-content' );
 
 
