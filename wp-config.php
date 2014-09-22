@@ -37,11 +37,12 @@ define('NONCE_SALT',       'sp28Oh>|]KkduuImIGI9?035{@gAc[q>}):XQfI@n8/(sUvh6qm)
 /* WordPress Localized Language. */
 define( 'WPLANG', 'sv_SE' );
 
+define('BB_HOST', 'http://' . $_SERVER['HTTP_HOST']);
 
 /* Custom WordPress URL. */
-define( 'WP_SITEURL',     'http://vps1.capi/wp' );
-define( 'WP_HOME',        'http://vps1.capi' );
-define( 'WP_CONTENT_URL', 'http://vps1.capi/wp-content' );
+define( 'WP_SITEURL',     BB_HOST . '/wp' );
+define( 'WP_HOME',        BB_HOST );
+define( 'WP_CONTENT_URL', BB_HOST . 'wp-content' );
 define( 'WP_CONTENT_DIR', dirname(__FILE__) . '/wp-content' );
 
 
