@@ -44,7 +44,7 @@ namespace :deploy do
 
   task :update_code do
     on roles(:prod) do
-      execute "cd #{ current_path }; php composer install;"
+      execute "cd #{ current_path }; php composer update;"
     end
   end
   
