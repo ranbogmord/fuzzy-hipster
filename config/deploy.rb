@@ -1,8 +1,14 @@
 # config valid only for Capistrano 3.1
 lock '3.2.1'
 
+set :stages, ["staging", "production"]
+set :default_stage, "production"
+
 set :application, 'TestCapistrano'
 set :repo_url, 'git@github.com:ranbogmord/fuzzy-hipster.git'
+
+# Targets
+role :prod, "deploy@31.220.26.87"
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
@@ -36,22 +42,11 @@ set :deploy_to, '/var/www/capistrano'
 
 namespace :deploy do
 
-  desc 'Restart application'
-  task :restart do
-    on roles(:app), in: :sequence, wait: 5 do
-    
+  task :update_code do
+    on roles(:prod) do
+      execute "cd #{ current_path }; php composer install;"
     end
   end
-
-  after :publishing, :restart
-
-  after :restart, :clear_cache do
-    on roles(:web), in: :groups, limit: 3, wait: 10 do
-      # Here we can do anything such as:
-      # within release_path do
-      #   execute :rake, 'cache:clear'
-      # end
-    end
-  end
-
+  
+  after :publishing, :update_code
 end
