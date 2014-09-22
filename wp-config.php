@@ -39,8 +39,8 @@ define( 'WPLANG', 'sv_SE' );
 
 
 /* Custom WordPress URL. */
-define( 'WP_SITEURL',     'http://vps1.capi' );
-define( 'WP_HOME',        'http://vps1.capi/wp' );
+define( 'WP_SITEURL',     'http://vps1.capi/wp' );
+define( 'WP_HOME',        'http://vps1.capi' );
 define( 'WP_CONTENT_URL', 'http://vps1.capi/wp-content' );
 define( 'WP_CONTENT_DIR', dirname(__FILE__) . '/wp-content' );
 
