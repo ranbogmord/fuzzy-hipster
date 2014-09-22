@@ -24,14 +24,14 @@ $table_prefix = 'wp_';
 
 
 /* Authentication Unique Keys and Salts. */
-define('AUTH_KEY',         '! K%HYW(b({,Yw}gJ]wr9hXX+>~OAP@(rgYE~1c dB}fJ-fLHSa2|M|VS6g*h!;$');
-define('SECURE_AUTH_KEY',  'jBaQi-o|o$y|F<{)cQ +9&Df7H>!ctt nz|wOzZ9=y:M,QQ`B*.yR*]$tfl:o<|O');
-define('LOGGED_IN_KEY',    'N$zmfJL,0>2HFN%t]Pd$O201;!vh?$?;4{T|U7Gexr5^mYMm-+)%+lU=QTFu?zxS');
-define('NONCE_KEY',        'zW+&N1_J75_g M`s7b2GG3K3-PE_V+,c7Bw06|@Ti([Ew-6>4$n?RPv4>l`_Thb|');
-define('AUTH_SALT',        '(9vIzz{AqgtN*6|W9{`@F+(=');
-define('SECURE_AUTH_SALT', '< np>V7!#eVl9v_1Ms-l]<5]#atdj=8BK`7du#.jVl{E&OzaRL(A#|Mw};-WUROZ');
-define('LOGGED_IN_SALT',   '|EmnR4#cX2LE-l&9j-E;fq*`4{$#b3wtT/|/ YY5u`?&N#!EH?gYPFKw8;TbM0;8');
-define('NONCE_SALT',       'sp28Oh>|]KkduuImIGI9?035{@gAc[q>}):XQfI@n8/(sUvh6qm)+:lc;~blx=R:');
+define('AUTH_KEY',         'Ange en unik fras här');
+define('SECURE_AUTH_KEY',  'Ange en unik fras här');
+define('LOGGED_IN_KEY',    'Ange en unik fras här');
+define('NONCE_KEY',        'Ange en unik fras här');
+define('AUTH_SALT',        'Ange en unik fras här');
+define('SECURE_AUTH_SALT', 'Ange en unik fras här');
+define('LOGGED_IN_SALT',   'Ange en unik fras här');
+define('NONCE_SALT',       'Ange en unik fras här');
 
 
 /* WordPress Localized Language. */
