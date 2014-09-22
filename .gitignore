@@ -1,2 +1,4 @@
 wp/
 vendor/
+wp-config.php
+.htaccess
