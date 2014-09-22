@@ -1,97 +1,78 @@
 <?php
 /**
- * Baskonfiguration för WordPress.
+ * Custom WordPress configurations on "wp-config.php" file.
  *
- * Denna fil innehåller följande konfigurationer: Inställningar för MySQL,
- * Tabellprefix, Säkerhetsnycklar, WordPress-språk, och ABSPATH.
- * Mer information på {@link http://codex.wordpress.org/Editing_wp-config.php 
- * Editing wp-config.php}. MySQL-uppgifter får du från ditt webbhotell.
- *
- * Denna fil används av wp-config.php-genereringsskript under installationen.
- * Du behöver inte använda webbplatsen, du kan kopiera denna fil direkt till
- * "wp-config.php" och fylla i värdena.
+ * This file has the following configurations: MySQL settings, Table Prefix, Secret Keys, WordPress Language, ABSPATH and more.
+ * For more information visit {@link http://codex.wordpress.org/Editing_wp-config.php Editing wp-config.php} Codex page.
+ * Created using {@link http://generatewp.com/wp-config/ wp-config.php File Generator} on GenerateWP.com.
  *
  * @package WordPress
+ * @generator GenerateWP.com
  */
 
-// ** MySQL-inställningar - MySQL-uppgifter får du från ditt webbhotell ** //
-/** Namnet på databasen du vill använda för WordPress */
-define('DB_NAME', 'testwp');
 
-/** MySQL-databasens användarnamn */
-define('DB_USER', 'root');
-
-/** MySQL-databasens lösenord */
-define('DB_PASSWORD', 'root');
-
-/** MySQL-server */
-define('DB_HOST', 'localhost');
-
-/** Teckenkodning för tabellerna i databasen. */
-define('DB_CHARSET', 'utf8');
-
-/** Kollationeringstyp för databasen. Ändra inte om du är osäker. */
-define('DB_COLLATE', '');
-
-/**#@+
- * Unika autentiseringsnycklar och salter.
- *
- * Ändra dessa till unika fraser!
- * Du kan generera nycklar med {@link https://api.wordpress.org/secret-key/1.1/salt/ WordPress.org secret-key service}
- * Du kan när som helst ändra dessa nycklar för att göra aktiva cookies obrukbara, vilket tvingar alla användare att logga in på nytt.
- *
- * @since 2.6.0
- */
-define('AUTH_KEY',         'Ange en unik fras här');
-define('SECURE_AUTH_KEY',  'Ange en unik fras här');
-define('LOGGED_IN_KEY',    'Ange en unik fras här');
-define('NONCE_KEY',        'Ange en unik fras här');
-define('AUTH_SALT',        'Ange en unik fras här');
-define('SECURE_AUTH_SALT', 'Ange en unik fras här');
-define('LOGGED_IN_SALT',   'Ange en unik fras här');
-define('NONCE_SALT',       'Ange en unik fras här');
-
-/**#@-*/
-
-/**
- * Tabellprefix för WordPress Databasen.
- *
- * Du kan ha flera installationer i samma databas om du ger varje installation ett unikt
- * prefix. Endast siffror, bokstäver och understreck!
- */
-$table_prefix  = 'wp_';
-
-/**
- * WordPress-språk, förinställt för svenska.
- *
- * Du kan ändra detta för att ändra språk för WordPress.  En motsvarande .mo-fil
- * för det valda språket måste finnas i wp-content/languages. Exempel, lägg till
- * sv_SE.mo i wp-content/languages och ange WPLANG till 'sv_SE' för att få sidan
- * på svenska.
- */
-define('WPLANG', 'sv_SE');
+/* MySQL settings */
+define( 'DB_NAME',     'testwp' );
+define( 'DB_USER',     'root' );
+define( 'DB_PASSWORD', 'root' );
+define( 'DB_HOST',     'localhost' );
+define( 'DB_CHARSET',  'utf8' );
 
 
-define('WP_SITEURL', "http://" . $_SERVER['HTTP_HOST'] . '/wp');
-define('WP_HOME', "http://" . $_SERVER['HTTP_HOST']);
+/* MySQL database table prefix. */
+$table_prefix = 'wp_';
 
+
+/* Authentication Unique Keys and Salts. */
+define('AUTH_KEY',         '! K%HYW(b({,Yw}gJ]wr9hXX+>~OAP@(rgYE~1c dB}fJ-fLHSa2|M|VS6g*h!;$');
+define('SECURE_AUTH_KEY',  'jBaQi-o|o$y|F<{)cQ +9&Df7H>!ctt nz|wOzZ9=y:M,QQ`B*.yR*]$tfl:o<|O');
+define('LOGGED_IN_KEY',    'N$zmfJL,0>2HFN%t]Pd$O201;!vh?$?;4{T|U7Gexr5^mYMm-+)%+lU=QTFu?zxS');
+define('NONCE_KEY',        'zW+&N1_J75_g M`s7b2GG3K3-PE_V+,c7Bw06|@Ti([Ew-6>4$n?RPv4>l`_Thb|');
+define('AUTH_SALT',        '(9vIzz{AqgtN*6|W9{`@F+(=');
+define('SECURE_AUTH_SALT', '< np>V7!#eVl9v_1Ms-l]<5]#atdj=8BK`7du#.jVl{E&OzaRL(A#|Mw};-WUROZ');
+define('LOGGED_IN_SALT',   '|EmnR4#cX2LE-l&9j-E;fq*`4{$#b3wtT/|/ YY5u`?&N#!EH?gYPFKw8;TbM0;8');
+define('NONCE_SALT',       'sp28Oh>|]KkduuImIGI9?035{@gAc[q>}):XQfI@n8/(sUvh6qm)+:lc;~blx=R:');
+
+
+/* WordPress Localized Language. */
+define( 'WPLANG', 'sv_SE' );
+
+
+/* Custom WordPress URL. */
+define( 'WP_SITEURL',     'http://vps1.capi' );
+define( 'WP_HOME',        'http://vps1.capi/wp' );
+define( 'WP_CONTENT_URL', 'http://vps1.capi/wp-content' );
 define( 'WP_CONTENT_DIR', dirname(__FILE__) . '/wp-content' );
 
 
-/** 
- * För utvecklare: WordPress felsökningsläge. 
- * 
- * Ändra detta till true för att aktivera meddelanden under utveckling. 
- * Det är rekommderat att man som tilläggsskapare och temaskapare använder WP_DEBUG 
- * i sin utvecklingsmiljö. 
- */ 
-define('WP_DEBUG', false);
+/* Multisite. */
+define( 'WP_ALLOW_MULTISITE', true );
 
-/* Det var allt, sluta redigera här! Blogga på. */
 
-/** Absoluta sökväg till WordPress-katalogen. */
+/* WordPress debug mode for developers. */
+define( 'WP_DEBUG',         false );
+
+
+/* WordPress Cache */
+define( 'WP_CACHE', true );
+
+
+/* Compression */
+define( 'COMPRESS_CSS',        true );
+define( 'COMPRESS_SCRIPTS',    true );
+define( 'CONCATENATE_SCRIPTS', true );
+define( 'ENFORCE_GZIP',        true );
+
+
+/* Updates */
+define( 'WP_AUTO_UPDATE_CORE', false );
+define( 'DISALLOW_FILE_MODS', true );
+define( 'DISALLOW_FILE_EDIT', true );
+
+
+/* Absolute path to the WordPress directory. */
 if ( !defined('ABSPATH') )
 	define('ABSPATH', dirname(__FILE__) . '/wp/');
 
-/** Anger WordPress-värden och inkluderade filer. */
+/* Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
