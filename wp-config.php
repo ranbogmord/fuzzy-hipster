@@ -72,8 +72,10 @@ $table_prefix  = 'wp_';
 define('WPLANG', 'sv_SE');
 
 
-define('WP_SITEURL', $_SERVER['HTTP_HOST'] . '/wp');
-define('WP_HOME', $_SERVER['HTTP_HOST']);
+define('WP_SITEURL', "http://" . $_SERVER['HTTP_HOST'] . '/wp');
+define('WP_HOME', "http://" . $_SERVER['HTTP_HOST']);
+
+define( 'WP_CONTENT_DIR', dirname(__FILE__) . '/wp-content' );
 
 
 /** 
