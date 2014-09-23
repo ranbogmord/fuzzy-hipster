@@ -48,5 +48,5 @@ namespace :deploy do
     end
   end
   
-  after :updated, :update_code
+  after :publishing, :update_code
 end
